@@ -1,6 +1,6 @@
 ## Common Project info
 PROJECT_NAME = "Лабораторна робота №9"
-PROJECT_BRIEF = "Квадратний корінь з числа"
+PROJECT_BRIEF = "doxygen документація проекту"
 PROJECT_NUMBER = 0.1
 
 ## output options
