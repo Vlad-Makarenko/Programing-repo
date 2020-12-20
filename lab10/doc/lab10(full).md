@@ -37,7 +37,7 @@
 
 _Головна функція_`main()`. Приймає задане нами число. Задає випадкове число від 1 до 50. Двічі викликає функцію `Square_root`. _Схема алгоритму функції_ подана на рис. 1.
 
-![Схема алгоритму функції main](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab10/doc/assets/main%20%28%29.png?raw=true)
+![Схема алгоритму функції1](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab10/doc/assets/main%20%28%29.png?raw=true)
 Рисунок 1  --- Схема алгоритму функції `main`
 
 
@@ -189,7 +189,7 @@ _Крок 1_ (рис. 11). Вхідні данні функції
 _Крок 2_ (див. рис. 12). Виконуємо функцію для заданої послідовності 
 
 ![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab10/doc/assets/numbers.png?raw=true)
-Рисунок 8 --- Результат виконання функції для другого кроку
+Рисунок 12 --- Результат виконання функції для другого кроку
 
 #### Структура проекту
 
