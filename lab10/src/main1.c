@@ -44,7 +44,7 @@ float Square_root (int number); // задємо фунцкію для розра
  * - виклик функціїї Square_root для числа згенерованого функцією rand
  * - виклик функціїї Square_root для заданого нами числа
  * @return успішний код повернення з програми (0)
- * @param number число, з якого отримаємо корінь
+ * @param number число, я якого отримаємо корінь
  * @param result1 результат першого виклику функції Square_root
  * @param result2 результат другого виклику функції Square_root
  */
@@ -53,7 +53,7 @@ int main ()
 {
 	srand(time(NULL));
 	int number;
-	float result1 = Square_root (number = rand() % 50 + 1); //робимо перший виклик для випадкового числа, заданого функцією "rand()"
+	float result1 = Square_root (number = rand() % 50); //робимо перший виклик для випадкового числа, заданого функцією "rand()"
 	float result2 = Square_root (number = 25); //робимо другий вкилик для зданого нами числа
 	return 0;
 }
