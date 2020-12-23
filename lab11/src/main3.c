@@ -3,26 +3,32 @@
 #include <time.h>
 
 
-float find_min_max_pos(int size, float array[], int pos_min_max[]);
+float find_min_max_pos(int size, float *array, int pos_min_max[]);
 void fill_res_arr(float array[], float *result_arr, int pos1, int pos2);
 
 #define SIZE 10
 
 int main()
 {
-    float array[SIZE] = {1.5, 1.2, 1.3, 1.4, 1.4, 1.5, 1.2, 1.1, 1.3, 1.5};
-
+    srand(time(NULL));
+    
+    float *array= malloc(SIZE * sizeof(float));
+    for (int i = 0; i < SIZE; i++){
+        *(array + i) = rand() % 10000 / 10000;
+    }
+    
     int pos_min_max[2] = {0};
     int size_of_res = find_min_max_pos(SIZE, array, pos_min_max);
     float *result_arr = malloc(size_of_res * sizeof(float));
     
     fill_res_arr(array, result_arr, pos_min_max[0], pos_min_max[1]);
     free(result_arr);
+    free(array);
     return 0;
 }
 
 
-float find_min_max_pos(int size, float array[], int pos_min_max[])
+float find_min_max_pos(int size, float *array, int pos_min_max[])
 {
     int temp_pos = 1;
     int count_pos = 0;
@@ -49,9 +55,9 @@ float find_min_max_pos(int size, float array[], int pos_min_max[])
     return count_pos;
 }
 
-void fill_res_arr (float array[], float *result_arr, int pos1, int pos2){
+void fill_res_arr (float *array, float *result_arr, int pos1, int pos2){
     for (int i = pos1; i <= pos2; i++ ){
-        *(result_arr + (i - pos1)) = array[i];
+        *(result_arr + (i - pos1)) = *(array + i);
     }
 }
 
