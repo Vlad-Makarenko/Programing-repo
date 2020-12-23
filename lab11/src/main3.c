@@ -4,7 +4,7 @@
 
 
 float find_min_max_pos(int size, float array[], int pos_min_max[]);
-void fill_res_arr(float array[], float result_arr[], int pos1, int pos2);
+void fill_res_arr(float array[], float *result_arr, int pos1, int pos2);
 
 #define SIZE 10
 
@@ -49,7 +49,7 @@ float find_min_max_pos(int size, float array[], int pos_min_max[])
     return count_pos;
 }
 
-void fill_res_arr (float array[], float result_arr[], int pos1, int pos2){
+void fill_res_arr (float array[], float *result_arr, int pos1, int pos2){
     for (int i = pos1; i <= pos2; i++ ){
         *(result_arr + (i - pos1)) = array[i];
     }

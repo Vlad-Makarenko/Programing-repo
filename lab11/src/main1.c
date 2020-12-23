@@ -29,7 +29,8 @@
  * @param initial_array - отриманий масив елементів
  */
 
-void fill_initial_array(int size, int initial_array[]);
+
+void fill_initial_array(int size, int *initial_array);
 
 /**
  * функція для розрахунку кількості повторів кожного елемента у вхідному масиві
@@ -37,7 +38,7 @@ void fill_initial_array(int size, int initial_array[]);
  * @param count кількість повторів одного елемента
  */
  
-void fill_array_of_repeats(int size, int initial_array[], int array_of_repeats[]);
+void fill_array_of_repeats(int size, int *initial_array, int *array_of_repeats);
 
 /**
  * функція для розрахунку розміру результуючого масиву
@@ -46,7 +47,7 @@ void fill_array_of_repeats(int size, int initial_array[], int array_of_repeats[]
  * @param flag  - змінна, для виконання умови
  */
  
-int size_of_result(int size, int initial_array[], int array_of_repeats[]);
+int size_of_result(int size, int *initial_array, int *array_of_repeats);
 
 /**
  * функція для заповнення результуючого масиву
@@ -55,7 +56,7 @@ int size_of_result(int size, int initial_array[], int array_of_repeats[]);
  * @param flag - змінна для виконання умови
  */
  
-void fill_result_array(int size, int initial_array[], int array_of_repeats[], int result_array[]);
+void fill_result_array(int size, int *initial_array, int *array_of_repeats, int *result_array);
 
 /**
  * Розмір вхідного масиву
@@ -83,8 +84,8 @@ int main()
 {
     srand(time(NULL));
     
-    int initial_array[SIZE] = {0};
-    int array_of_repeats[SIZE] = {0};
+    int *initial_array = malloc(SIZE * sizeof(int));
+    int *array_of_repeats = malloc(SIZE * sizeof(int));
     
     fill_initial_array(SIZE, initial_array);
     fill_array_of_repeats(SIZE, initial_array, array_of_repeats);
@@ -96,40 +97,42 @@ int main()
     fill_result_array(new_size, initial_array, array_of_repeats, result_array);
     
     free(result_array);
+    free(initial_array);
+    free(array_of_repeats);
     
     
     
     return 0;
 }
 
-void fill_initial_array(int size, int initial_array[]) {
+void fill_initial_array(int size, int *initial_array) {
     for (int i = 0; i < SIZE; i++) {
-        initial_array[i] = rand() % 5 + 1;
+        *(initial_array + i) = rand() % 5 + 1;
     }
 }
 
-void fill_array_of_repeats(int size, int initial_array[], int array_of_repeats[]){
+void fill_array_of_repeats(int size, int *initial_array, int *array_of_repeats){
     int count = 0;
     for (int i = 0; i < SIZE; i++){
         for (int j = 0; j < SIZE; j++) {
-            if (initial_array[i] == initial_array[j]) {
+            if (*(initial_array + i) == *(initial_array + j)) {
                 count++;
             }
         }
-        array_of_repeats[i] = count;
+        *(array_of_repeats + i) = count;
         count = 0;
     }
 }
 
-int size_of_result(int size, int initial_array[], int array_of_repeats[]){
+int size_of_result(int size, int *initial_array, int *array_of_repeats){
     int new_size = 0;
     int flag = 0;
     for (int i = 0; i < SIZE; i++){
-        if (array_of_repeats[i] == 1){
+        if (*(array_of_repeats + i) == 1){
             continue;
         }else{
             for (int j = 0; j < i; j++){
-                if(initial_array[i] == initial_array[j]) {
+                if(*(initial_array + i) == *(initial_array + j)) {
                     flag = 1;
                 }
             }
@@ -142,25 +145,24 @@ int size_of_result(int size, int initial_array[], int array_of_repeats[]){
     return new_size;
 }
 
-void fill_result_array(int size, int initial_array[], int array_of_repeats[], int result_array[]){
+void fill_result_array(int size, int *initial_array, int *array_of_repeats, int *result_array){
     int k = 0;
     int flag = 0;
     for (int i = 0; i < SIZE; i++){
-        if (array_of_repeats[i] == 1){
+        if (*(array_of_repeats + i) == 1){
             continue;
         }else{
             for (int j = 0; j < i; j++){
-                if(initial_array[i] == initial_array[j]) {
+                if(*(initial_array + i) == *(initial_array + j)) {
                     flag = 1;
                 }
             }
             if (flag == 0){
-                *(result_array + k) = initial_array[i];
-                *(result_array + k + 1) = array_of_repeats[i];
+                *(result_array + k) = *(initial_array + i);
+                *(result_array + k + 1) = *(array_of_repeats + i);
                 k += 2;
             }
             flag = 0;
         }
     }    
 }
-
