@@ -25,7 +25,7 @@ char Encrypt_text (char *buf, int shift){
         if(isdigit(*(buf + i)) >= 1 || ispunct(*(buf + i)) >= 1 || *(buf + i) == ' ') {
             continue;
         }
-        else if (isalpha(*(buf + i) + SHIFT) == 0) {  //!!!!!!!!!!//!!!!!!!!!!
+        else if (isalpha(*(buf + i) + SHIFT) == 0) {  
             *(buf + i) = (*(buf + i) - 26) + SHIFT;
         }else{
             *(buf + i) += SHIFT;
