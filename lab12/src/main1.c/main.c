@@ -47,9 +47,9 @@ int main()
     int *result_array = malloc(new_size * 2 * sizeof(int));
 
     fill_result_array(new_size, initial_array, array_of_repeats, result_array);
-/////////////////////////////////////////////////////////////////////////////////
+
     print_result(result_array, new_size);
-///////////////////////////////////////////////////////////////////////////////
+
     free(result_array);
     free(initial_array);
     free(array_of_repeats);

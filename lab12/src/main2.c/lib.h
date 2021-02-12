@@ -19,7 +19,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
-//#include "lib.c"
+
 
 /**
 * Розмір вхідного масиву
