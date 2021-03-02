@@ -34,7 +34,7 @@
 _Головна функція_`main()`. Викликає функції `tree_function`, `print_size_of_directory`,  `do_arithmetic_operation` для виконання загальних та індивідуального завдань
  _Схема алгоритму функції_ подана на рис. 1.
 
-![Схема алгоритму функції](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab14/doc/assets/tree_function.png?raw=true)
+![Схема алгоритму функції](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab14/doc/assets/main.png?raw=true)
 Рисунок 1  --- Схема алгоритму функції `main`
 
 
