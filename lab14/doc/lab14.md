@@ -54,16 +54,16 @@ _Функція_ `do_arithmetic_operation`:
 #### Структура проекту
 
     ├── lab14
-    ├── Doxyfile
-    ├── Makefile
-    ├── input.txt
-    ├── doc
-        ├── lab14.md
-        └── assets
-    └── src
-        ├── main.c
-        ├── lib.c
-        └── lib.h
+        ├── Doxyfile
+        ├── Makefile
+        ├── input.txt
+        ├── doc
+            ├── lab14.md
+            └── assets
+        └── src
+            ├── main.c
+            ├── lib.c
+            └── lib.h
 
 ### 2.3 Важливі фрагменти програми
 
