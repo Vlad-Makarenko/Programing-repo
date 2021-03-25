@@ -34,7 +34,7 @@
 _Головна функція_`main()`. Викликає функції `tree_function`, `print_size_of_directory`,  `do_arithmetic_operation` для виконання загальних та індивідуального завдань
  _Схема алгоритму функції_ подана на рис. 1.
 
-![Схема алгоритму функції](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab14/doc/assets/tree_function.png?raw=true)
+![Схема алгоритму функції](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab14/doc/assets/main.png?raw=true)
 Рисунок 1  --- Схема алгоритму функції `main`
 
 
@@ -54,42 +54,53 @@ _Функція_ `do_arithmetic_operation`:
 #### Структура проекту
 
     ├── lab14
-    ├── Doxyfile
-    ├── Makefile
-    ├── input.txt
-    ├── doc
-        ├── lab14.md
-        └── assets
-    └── src
-        ├── main.c
-        ├── lib.c
-        └── lib.h
+        ├── Doxyfile
+        ├── Makefile
+        ├── input.txt
+        ├── doc
+            ├── lab14.md
+            └── assets
+        └── src
+            ├── main.c
+            ├── lib.c
+            └── lib.h
 
 ### 2.3 Важливі фрагменти програми
 
-#### Підключення заголовочних файлів для взаємодії з файлами та вико
 
-    #include <stdlib.h>  
-	#include <dirent.h>  
-	#include <stdio.h>  
-	#include <string.h>
 
-#### Виведення структури каталогу, як це робить утиліта `tree`
+#### Опис функції ```tree_function```, яка приймає назву директорії і кількість відступів  та виводить сруктуру каталогу
 
 ``` 
-printf(" |");  
-printf("%*c", count_of_space, ' ');  
-printf("+---");  
-printf("%s\n", directory->d_name);
-  
-```
-#### Рекурсивний виклик функції  `tree_function`
+void tree_function(char *directory_name, int count_of_space)
+{
+    DIR *folder;
+    struct dirent *directory;
 
-```
-strcpy(full_name_of_subdirectory, directory_name);  
-strcat(full_name_of_subdirectory, SLESH);  
-strcat(full_name_of_subdirectory, directory->d_name);  
-tree_function(full_name_of_subdirectory, count_of_space + 4);
+    folder = opendir(directory_name);
+    if (folder != NULL)
+    {
+        while ((directory = readdir(folder)))
+        {
+            if (strcmp(directory->d_name, ".") != 0 && strcmp(directory->d_name, "..") != 0)
+            {
+                printf(" |");
+                printf("%*c", count_of_space, ' ');
+                printf("+---");
+                printf("%s\n", directory->d_name);
+                char *full_name_of_subdirectory = malloc((strlen(directory_name) + 1 + strlen(directory->d_name)) * sizeof(char));
+                strcpy(full_name_of_subdirectory, directory_name);
+                strcat(full_name_of_subdirectory, SLESH);
+                strcat(full_name_of_subdirectory, directory->d_name);
+                tree_function(full_name_of_subdirectory, count_of_space + 4);
+                free(full_name_of_subdirectory);
+            }
+        }
+    }
+
+    closedir(folder);
+}
+  
 ```
 
 
