@@ -1,0 +1,6 @@
+1 green Ukraine 0
+0 blue Usa 1
+1 red England 2
+1 black Germany 0
+0 white Germany 1
+0 orange Ukraine 2
