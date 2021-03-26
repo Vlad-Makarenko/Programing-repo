@@ -5,7 +5,7 @@
 #include "lib.h"
 
 void ReadFromFile(struct Backpack **backpacks){
-    FILE *file = fopen("D:\\Programing-repo\\lab15 && lab17\\backpacks.txt", "r");
+    FILE *file = fopen("backpacks.txt", "r");
     if (file == NULL) {
         printf("can't open because: %s", strerror(errno));
         exit(EXIT_FAILURE);
@@ -95,7 +95,7 @@ void PrintInConsole(struct Backpack **backpacks){
 }
 
 void PrintInFile(struct Backpack **backpacks){
-    FILE *file = fopen("D:\\Programing-repo\\lab15 && lab17\\result.txt", "w");
+    FILE *file = fopen("result.txt", "w");
     if (file == NULL) {
         printf("can't open because: %s", strerror(errno));
         exit(EXIT_FAILURE);
@@ -126,6 +126,7 @@ struct Backpack* FindGermanBackpack(struct Backpack **backpacks, int size){
     int right = 0;
     char country[15] = "Germany";
     int flag = 0;
+    printf("German city backpack(s):\n");
     for(int i = 0; i < size; i++){
         struct Backpack *temp = *(backpacks + i);
         if (strcmp(temp->country, country) == 0 && temp->enumPurpose == URBAN) {
@@ -144,14 +145,14 @@ struct Backpack* FindGermanBackpack(struct Backpack **backpacks, int size){
         }
     }
     if(flag == 0){
-        printf("German urban backpacks not found\n");
+        printf("German city backpacks not found\n");
     }
     return *(backpacks + right);
 }
 
 
 void WriteToBinaryFile(struct Backpack **backpacks) {
-    FILE *file = fopen("D:\\Programing-repo\\lab15 && lab17\\result.bin", "w");
+    FILE *file = fopen("result.bin", "wb");
     if (file == NULL) {
         printf("can't open because: %s", strerror(errno));
         exit(EXIT_FAILURE);
@@ -173,7 +174,7 @@ void WriteToBinaryFile(struct Backpack **backpacks) {
 
 
 void ReadFromBinaryFile(struct Backpack **backpacks){
-    FILE *file = fopen("D:\\Programing-repo\\lab15 && lab17\\result.bin", "rb");
+    FILE *file = fopen("result.bin", "rb");
     if (file == NULL) {
         printf("can't open because: %s", strerror(errno));
         exit(EXIT_FAILURE);

@@ -11,7 +11,7 @@
  * @version 1.0
  */
 
-#include "../src/lib.h"
+#include "lib.h"
 
 /**
  * Верифікація роботи функції {@link SortByCriterion}
@@ -305,9 +305,9 @@ int main()
     test &= Test_SortByCriterion();
     test &= Test_FindGermanBackpack();
     if (test){
-        printf("All tests completed successfully");
+        printf("All tests completed successfully\n");
     }else{
-        printf("Some of the tests failed");
+        printf("Some of the tests failed\n");
     }
     return test;
 }
