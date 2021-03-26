@@ -41,7 +41,8 @@ _Головна функція_`main()`. Викликає функції для 
 
  _Схема алгоритму функції_ подана на рис. 1.
 
-![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/main%281%29.png?raw=true))
+![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/main%281%29.png?raw=true)
+
 Рисунок 1  --- Схема алгоритму функції `main`
 
 
@@ -49,17 +50,20 @@ _Функція сортування_ `SortByCriterion`. функцію, яка 
 _Схема алгоритму функції_ подана на рис. 2.
 
 ![Схема алгоритму функції](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/SortByCriterion.png?raw=true)
+
 Рисунок 2 --- Схема алгоритму функції `SortByCriterion`
 
-_Функція `comparator`:Функція порівнює строки між собою та повертає результат порівняння.
+_Функція `comparator`: Функція порівнює строки між собою та повертає результат порівняння.
 
 ![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/comparator.png?raw=true)
+
 Рисунок 3 --- Схема алгоритму функції  `comparator`
 
 _Функція_ `FindGermanBackpack`:
  Функція знаходить структуру з німецьким міським рюкзаком та виводить її на екран
 
 ![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/FindGermanBackpack.png?raw=true)
+
 Рисунок 4 --- Схема алгоритму функції  `FindGermanBackpack`
 
 
@@ -136,16 +140,19 @@ int comparator(char a[15], char b[15]){
 _Крок 1_ (рис.5 ). Виводиться відсортований масив структур за заданим критерієм(volume)
 
 ![result1](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/result1.png?raw=true)
+
 Рисунок 5 --- Результат виконання кроку 1
 
 _Крок 2_ (див. рис.6 ). Виконується функція пошуку об'єкту
 
 ![result2](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/result2.png?raw=true)
+
 Рисунок 6 --- Результат виконання кроку 2
 
 _Крок 3_ (див. рис.7 ). Результат виконання тестів
 
 ![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab15%20&&%20lab17/doc/assets/result3%281%29.png?raw=true)
+
 Рисунок 7 --- Результат виконання кроку 3
 
 ## Висновки
