@@ -37,12 +37,13 @@
  * - створення списку
  * - запит у дії у користувача
  * - виконання запиту користувача
+ * - звільнення виделіної пам'яті
  * @return успішний код повернення з програми (0)
  */
 int main() {
 
-    struct List *ls = NewList();
-    ReadListFromFile(ls);
+    struct List *list = NewList();
+    ReadListFromFile(list);
     for (int i = 0; i < 44; ++i) {
         int index;
         printf(" |----------ВАРИАНТЫ ДЕЙСТВИЙ----------|\n");
@@ -64,9 +65,9 @@ int main() {
                 int side;
                 scanf("%d", &side);
                 printf(" |\n |-------------------------------СПИСОК-------------------------------|\n\n");
-                ShowList(ls, side);
+                ShowList(list, side);
                 printf(" |--------------------------------------------------------------------|\n\n");
-                PrintListInFile(ls, side);
+                PrintListInFile(list, side);
                 break;
             case 2:
                 printf("\n |-------------Критерии поиска-------------|\n");
@@ -79,14 +80,14 @@ int main() {
                 printf(" |\tВведите критерий, по которому искать рюкзак: ");
                 int number;
                 scanf("%d", &number);
-                FindBackpack(ls, number);
+                FindBackpack(list, number);
                 break;
             case 3:
                 printf("\n\n |---------------------------------------|");
                 printf("\n |\tВведите индекс елемента, который удалить: ");
                 int pos;
                 scanf("%d", &pos);
-                DeleteElement(ls, pos);
+                DeleteElement(list, pos);
                 printf(" |\tЕлемент удален\n");
                 printf(" |---------------------------------------|\n\n\n");
                 break;
@@ -103,27 +104,27 @@ int main() {
                 scanf("%d", &num);
                 switch (num) {
                     case 1:
-                        SortListByCriterion(ls, compareLd);
+                        SortListByCriterion(list, compareLd);
                         printf(" |\tСписок отсортирован!\n");
                         printf(" |-----------------------------------------|\n\n");
                         break;
                     case 2:
-                        SortListByCriterion(ls, compareColor);
+                        SortListByCriterion(list, compareColor);
                         printf(" |\tСписок отсортирован!\n");
                         printf(" |-----------------------------------------|\n\n");
                         break;
                     case 3:
-                        SortListByCriterion(ls, compareVolume);
+                        SortListByCriterion(list, compareVolume);
                         printf(" |\tСписок отсортирован!\n");
                         printf(" |-----------------------------------------|\n\n");
                         break;
                     case 4:
-                        SortListByCriterion(ls, compareCountry);
+                        SortListByCriterion(list, compareCountry);
                         printf(" |\tСписок отсортирован!\n");
                         printf(" |-----------------------------------------|\n\n");
                         break;
                     case 5:
-                        SortListByCriterion(ls, comparePurpose);
+                        SortListByCriterion(list, comparePurpose);
                         printf(" |\tСписок отсортирован!\n");
                         printf(" |-----------------------------------------|\n\n");
                         break;
@@ -155,12 +156,12 @@ int main() {
                 printf("\n |\tВведите позицию, после которой нужно вставить элемент в список: ");
                 int position;
                 scanf("%d", &position);
-                InsertElement(ls,  position, LD, color ,  volume,  country,  aim);
+                InsertElement(list,  position, LD, color ,  volume,  country,  aim);
                 printf(" |\tВставка выполнена!");
                 printf("\n |---------------------------------------|\n\n");
                 break;
             case 6:
-                free(ls);
+                FreeList(list);
                 printf(" |\tПрограмма выполнена успешно\n");
                 printf(" |-------------------------------------|\n\n");
                 return 0;
@@ -170,6 +171,7 @@ int main() {
                 break;
         }
     }
+    FreeList(list);
     //Lab15();
     return 0;
 }

@@ -219,7 +219,6 @@ void PrintListInFile(struct List *list, int side){
             printf("\n");
         }
     }
-    printf("\n");
     fclose(file);
 }
 
@@ -477,5 +476,14 @@ void SortListByCriterion(struct List *list, int(*compare)(struct ListBackpack*, 
         }
         set = max->prev;
     }
+}
+
+void FreeList(struct List *list){
+    while (list->head) {
+        struct ListBackpack *p = list->head;
+        list->head = p->next;
+        free(p);
+    }
+    free(list);
 }
 

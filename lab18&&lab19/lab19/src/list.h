@@ -184,4 +184,12 @@ int comparePurpose(struct ListBackpack* a, struct ListBackpack* b);
  */
 void SortListByCriterion(struct List *list, int(*compare)(struct ListBackpack*, struct ListBackpack*));
 
+/**
+ * Функція очищення пам'яті
+ *
+ * Функція очищує список
+ * @param list список {@link ListBackpack} для очищення
+ */
+void FreeList(struct List *list);
+
 #endif //LAB19_LIST_H
