@@ -50,7 +50,6 @@ int main() {
     for(int i = 0; i < COUNT; i++){
         *(backpacks + i) = malloc(sizeof (struct Backpack));
     }
-    struct Backpack * backpacksIN = malloc(sizeof (struct Backpack));
 
 
     printf("Введите текст: ");
@@ -116,7 +115,6 @@ int main() {
     free(passed_text);
     free(result_deleting);
     free(text2);
-    free(backpacksIN);
     free(insert);
     for (int  i = 0; i < COUNT; i ++){
         free(*(backpacks + i));
