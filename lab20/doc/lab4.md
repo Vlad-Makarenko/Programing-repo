@@ -1,5 +1,5 @@
 ﻿
-# Лабораторна робота №3. Макровизначення
+# Лабораторна робота №4. Макровизначення
 
 ## 1. Вимоги
 
@@ -32,7 +32,7 @@
 
 ### 2.1 Функціональне призначення
 
-За допомогою розроблених функцій можна вставити елемент в список, видалити видалити елемент зі списку, відсортувати список та виконувати взаємодію з користувачем.
+За допомогою макровизначень можна дізнатись інформацію про час виконання функцій.
 
 ### 2.2 Опис логічної структури програми
 
@@ -42,6 +42,7 @@ _Головна функція_`main()`. Виконує взаємодію з к
  _Схема алгоритму функції_ подана на рис. 8.
 
 ![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/main19.png?raw=true)
+
 Рисунок 8  --- Схема алгоритму функції `main`
 
 
@@ -49,17 +50,20 @@ _Функція видалення_ `DeleteElement`. функція прийма
 _Схема алгоритму функції_ подана на рис. 9.
 
 ![Схема алгоритму функції](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/DeleteElement.png?raw=true)
+
 Рисунок 9 --- Схема алгоритму функції `DeleteElement`
 
 _Функція `SortListByCriterion`:Функція приймає список та критерій для сортування.
 _Схема алгоритму функції_ подана на рис. 10.
 ![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/SortListByCriterion.png?raw=true)
+
 Рисунок 10 --- Схема алгоритму функції  `SortListByCriterion`
 
 _Функція_ `InsertElement`: Функція приймає список в який буде вставлено елемент, позицію, на яку буде вставлено елемент там поля елементу.
 _Схема алгоритму функції_ подана на рис. 11.
 
 ![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/InsertElement.png?raw=true)
+
 Рисунок 11 --- Схема алгоритму функції  `InsertElement`
 
 
@@ -101,21 +105,21 @@ _Схема алгоритму функції_ подана на рис. 11.
 
 _Крок 1_ (рис.12 ). Початок роботи програми
 
-![result1](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/result4.png?raw=truee)
+![result1](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab20/doc/assets/result1.png?raw=true)
 Рисунок 12 --- Результат виконання кроку 1
 
 _Крок 2_ (див. рис.13 ). Виклик функції пошуку об'єкта
 
-![result2](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/result5.png?raw=true)
+![result2](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab20/doc/assets/result2.png?raw=true)
 Рисунок 13 --- Результат виконання кроку 2
 
 _Крок 3_ (див. рис.14 ). Завершення роботи програми 
 
-![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/result6.png?raw=true)
+![result3](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab20/doc/assets/result3.png?raw=true)
 Рисунок 14 --- Результат виконання кроку 3
 
 _Крок 4_ (див. рис.15 ). Виконання тестів
-![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab18&&lab19/doc/assets/valgrind.png?raw=true)
+![result4](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab20/doc/assets/result4.png?raw=true)
 Рисунок 15 --- Результат виконання кроку 4
 ### Структура проекту
 
