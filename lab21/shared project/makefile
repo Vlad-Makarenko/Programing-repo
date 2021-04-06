@@ -10,10 +10,10 @@ prep:
 	mkdir dist
 compile:
 	##main.bin test.bin
-	cp src/list.h ../shared
-	$(CC) -c $(C_OPTS) -o ./dist/list.o
-	ar rcs ./dist/liblist.a ./dist/list.o
-	cp ./dist/liblist.a ../shared
+	$(CC) -I../shared src/main.c -lentity -L../shared -o dist/main.bin
+	cp ../shared/liblist.so ./dist
+	./dist/main.bin
+
 	
 
 #main.bin: src/main.c
