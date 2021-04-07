@@ -78,13 +78,13 @@ compile:
 
 _Крок 1_ (рис.1 ). Утиліта ``nm`` для статичної бібліотеки
 
-![result1](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab21/doc/Screenshot_1.png?raw=true)
-![enter image description here](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab21/doc/Screenshot_2.png?raw=true)
+![result1](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab21/doc/assets/Screenshot_1.png?raw=true)
+![result1](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab21/doc/assets/Screenshot_2.png?raw=true)
 Рисунок 1 --- Результат виконання кроку 1
 
 _Крок 2_ (див. рис.2 ). Утиліта ``nm`` для динамічної бібліотеки
 
-![result2](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab21/doc/Screenshot_3.png?raw=true)
+![result2](https://github.com/Vlad-Makarenko/Programing-repo/blob/main/lab21/doc/assets/Screenshot_3.png?raw=true)
 Рисунок 2 --- Результат виконання кроку 2
 
 
