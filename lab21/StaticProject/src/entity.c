@@ -11,7 +11,7 @@
  * @version 1.0
  */
 
-#include "list.h"
+#include "entity.h"
 
 
 struct List *NewList()

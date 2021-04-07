@@ -9,8 +9,8 @@ clean:
 prep:
 	mkdir dist
 compile:
-	cp src/entity.h ../shared.a
+	cp src/entity.h ../shared
 	$(CC) -c $(C_OPTS) src/entity.c -o ./dist/entity.o
 	ar rcs ./dist/libentity.a ./dist/entity.o
-	cp ./dist/libentity.a ../shared.a
+	cp ./dist/libentity.a ../shared
 

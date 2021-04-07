@@ -9,7 +9,9 @@ clean:
 prep:
 	mkdir dist
 compile:
-	$(CC) -I ../shared src/main.c -lentity -L. ../shared -o dist/main.bin
+	$(CC) -I../StaticLib/dist src/main.c -lentity -L../StaticLib/dist -o dist/main.bin
+
+
 
 
 main.bin: src/main.c
