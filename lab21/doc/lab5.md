@@ -91,22 +91,23 @@ _Крок 2_ (див. рис.2 ). Утиліта ``nm`` для динамічн�
 ### Структура проекту
 
 	├── lab21
-	    ├── SharedLib
-	    	├── src
-	        ├── test
-	        └── makefile
-	    ├── SharedProject
-	        ├── src
-	        ├── test
-	        └── makefile
-        ├── StaticLib
-        	├── src
-	        ├── test
-	        └── makefile
+		├── Doxyfile
+		├── SharedLib
+	    		├── src
+	        	├── test
+	        	└── makefile
+		├── SharedProject
+	        	├── src
+	        	├── test
+	        	└── makefile
+        	├── StaticLib
+        		├── src
+	        	├── test
+	        	└── makefile
 		├── StaticProject
-            ├── src
-	        ├── test
-	        └── makefile
+            		├── src
+	        	├── test
+	        	└── makefile
 		└── doc
 		    ├── assets
 		    └── lab5.md
