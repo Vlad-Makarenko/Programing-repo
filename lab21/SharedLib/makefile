@@ -13,4 +13,3 @@ compile:
 	$(CC) -c $(C_OPTS) -fPIC -I../StaticLib/dist src/list.c -o dist/list.o
 	$(CC) -shared dist/list.o ../StaticLib/dist/libentity.a -o dist/liblist.so
 	cp dist/liblist.so ../shared
-
