@@ -62,7 +62,7 @@ int main() {
 
 
 
-    //delete list;
+    delete list;
     delete firm;
     delete backpack;
     return 0;
