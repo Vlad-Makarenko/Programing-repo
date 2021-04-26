@@ -257,7 +257,7 @@ void List::WriteToFile(const string &path) {
 
     fout.close();
 }
-
+ 
 //void List::Print() {
 //    for (int i = 0; i < this->Count; ++i) {
 //        Backpack *temp = this->backpacks[i];
