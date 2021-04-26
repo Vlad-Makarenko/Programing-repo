@@ -7,6 +7,15 @@
 #include "Container.h"
 
 
+List::List() : backpacks(nullptr), Count(0) {}
+
+List::List(const List &copy) : Count(copy.Count){
+    backpacks = new Backpack*[Count];
+    for (int i = 0; i < Count; ++i) {
+        backpacks[i] = new Backpack(*copy.backpacks[i]);
+    }
+}
+
 void List::setCount(const int count) {
     this->Count = count;
 }
@@ -22,10 +31,14 @@ List::~List(){
 
 void List::addBackpack(Backpack &backpack) {
     auto **temp = new Backpack*[this->Count + 1];
-    for (int i = 0; i < this->Count; ++i) {
-        temp[i] = this->backpacks[i];
-    }
+
+    memcpy(temp, backpacks, sizeof(Backpack) * Count);
+//    memcpy(temp + Count, *backpack, sizeof(Backpack));
+//    for (int i = 0; i < this->Count; ++i) {
+//        temp[i] = this->backpacks[i];
+//    }
     temp[Count] = &backpack;
+
     delete [] this->backpacks;
     this->backpacks = temp;
     this->Count +=1;
@@ -214,6 +227,7 @@ void List::ReadFromFile(const string &path) {
     string obj;
 
     this->setCount(6);
+    delete [] this->backpacks;
     this->backpacks = new Backpack*[Count];
     for (int i = 0; i < Count; ++i) {
         if (!fin.is_open()) {

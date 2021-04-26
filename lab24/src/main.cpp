@@ -22,11 +22,11 @@ int main() {
     //Парсинг строки на поля объектa
     string obj = "0 Orange 26 2 A.M.G Ukraine";
     cout << endl << ">The string from which to get the object: " << obj << endl << endl;
-    Backpack test1 = test1.SplitLineToObject(obj);
+    Backpack *test1 = &test1->SplitLineToObject(obj);
     //test = test.SplitLine(obj);
     PrintForm();
-    test1.Print();
-    list->addBackpack(test1);
+    test1->Print();
+    list->addBackpack(*test1);
     cout << "|-----------------------------------------------------------------------------------------------------|" << endl;
     cout << endl;
 
@@ -66,8 +66,7 @@ int main() {
     path = "D:\\Programing-repo\\lab24\\result.txt";
     list->WriteToFile(path);
 
-
-
+    delete test1;
     delete list;
     return 0;
 }

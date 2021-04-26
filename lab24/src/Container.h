@@ -11,6 +11,8 @@ class List{
     Backpack **backpacks;
     size_t Count;
 public:
+    List();
+    List(const List &copy);
     virtual ~List();
     void setCount(const int count);
 
