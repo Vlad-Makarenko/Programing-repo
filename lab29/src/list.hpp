@@ -11,12 +11,12 @@ public:
     List() {}
 
 
-    virtual ~List() = default; // {
-//        while (index >= 0){
-//            delete elements[index];
-//            index--;
-//        }
-//    }
+    virtual ~List()  {
+        while (index >= 0){
+            delete elements[index];
+            index--;
+        }
+    }
 
     void addElement( Type * element ){
         //index += 1;
