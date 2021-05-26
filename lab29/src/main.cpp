@@ -63,7 +63,6 @@ int main() {
 //    listchar.SortList();
 //    listchar.ShowList();
 
-
     List<string> liststring;
     string word1 = "Hello!";
     string word2 = "Have a nice day!";
